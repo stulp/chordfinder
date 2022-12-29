@@ -2,7 +2,7 @@
 
 The ChordFinder Java application helps you to find the names of chords that you play on your guitar (or piano). 
 
-![ChordFinder application](images/chordfinderapplication.png.png)
+![ChordFinder application](images/chordfinderapplication.png)
 
 When I used to be in indie rock bands (*sheds tear...*) part of the songwriting process would be to try modifications of existing chords, e.g. play a B major on the 7th fret, and play the high b and e strings open. It sounds nice and gritty, but as an autodidact, I wouldn't know what those chords are called. This app helped me with that, i.e. figuring out that the above chord is a B11. Then I would write the chords down on a piece of paper, e.g. Cmaj7, B11, D6*9, and explain to my bandmates, it's just C, B, D on the higher frets, but always play the b and e strings open. In programming, this would be frowned upon as "a workaround" ;-)
 
