@@ -34,17 +34,13 @@ Probably there are better tools or apps for doing this these days. But this was 
 
 # Manual
 
-## Introduction
-
-The ChordFinder applet is intended to help find the names of chords
+ChordFinder is intended to help find the names of chords
 played on a guitar, bass or piano, as well as alternate positions for
 this chord. "Playing" chords is done by clicking them in a
 visualization of the instrument. There is a seperate section on [finding
 chords](#finding-chords).
 
-## Interface Manual
-
-The ChordFinder applet should be displayed more or less as below. Its
+The ChordFinder should be displayed more or less as below. Its
 three main components are:
 
 - The [Instrument Panel](#Instrument-Panel), which shows an instrument
@@ -56,7 +52,7 @@ three main components are:
     choose the current chord. It also lists the chords currently played
     in the instrument.
 
-![ChordFinder applet overview.](images/chordfinderapplet-annotated.png)
+![ChordFinder overview.](images/chordfinderapplet-annotated.png)
 
 ## Instrument Panel
 
