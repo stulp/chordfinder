@@ -1,8 +1,32 @@
 # ChordFinder
 
+The ChordFinder Java application helps you to find the names of chords that you play on your guitar (or piano). 
+
+![ChordFinder application](images/chordfinderapplication.png.png)
+
+When I used to be in indie rock bands (*sheds tear...*) part of the songwriting process would be to try modifications of existing chords, e.g. play a B major on the 7th fret, and play the high b and e strings open. It sounds nice and gritty, but as an autodidact, I wouldn't know what those chords are called. This app helped me with that, i.e. figuring out that the above chord is a B11. Then I would write the chords down on a piece of paper, e.g. Cmaj7, B11, D6*9, and explain to my bandmates, it's just C, B, D on the higher frets, but always play the b and e strings open. In programming, this would be frowned upon as "a workaround" ;-)
+
+## Installation
+
+Requires Java SE 11.
+
+```
+cd src
+javac *.java
+java ChordFinderApplication
+```
+
+Or with make:
+
+```
+cd src
+make
+make run
+```
+
 ## History
 
-
+This code was written around the year 2000 with J2SE 1.4. The initial commit reflects that state. I don't remember if I was any good at coding then; I dare not look! The subsequent commits are dedicated to porting to SE 11 (16 years forward in half an hour!), fixing linter warnings, and converting the html documentation to markdown.
 
 # Manual
 
