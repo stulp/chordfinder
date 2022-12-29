@@ -1,6 +1,5 @@
 # ChordFinder Manual
 
-[]{#Introduction}
 
 ## Introduction
 
@@ -10,7 +9,6 @@ this chord. "Playing" chords is done by clicking them in a
 visualization of the instrument. There is a seperate section on [finding
 chords](findingchords.html).
 
-[]{#Interface Manual}
 
 ## Interface Manual
 
@@ -36,7 +34,6 @@ guitar's fretboard, or the piano's keyboard. These notes are
 "played". Blue notes are not actually played, but are part of the
 current chord displayed in the [CurrentChordPanel](#CurrentChordPanel).
 
-[]{#InstrumentPanel}
 
 ## InstrumentPanel
 
@@ -44,7 +41,6 @@ This panel allows you to "play" notes on an instrument (in green), and
 visualize notes from the chord in the ChordPanel (in blue). It either
 displays the fretboard of a guitar, or the keyboard of a piano.
 
-[]{#GuitarPanel}
 
 ### GuitarPanel
 
@@ -57,7 +53,6 @@ would normally strum. Pressing clear removes any notes played.
 [![GuitarPanel. Click to
 enlarge.](guitarpanel.png){width="500"}](guitarpanel.png)
 
-[]{#PianoPanel}
 
 ### PianoPanel
 
@@ -67,7 +62,6 @@ octaves displayed can be varied.
 [![PianoPanel. Click to
 enlarge.](pianopanel.png){width="500"}](pianopanel.png)
 
-[]{#CurrentChordPanel}
 
 ## CurrentChordPanel
 
@@ -91,7 +85,6 @@ the note being played in the InstrumentPanels abov.e
 The "Show chord in instrument" determines whether or not the current
 chord is displayed in the [InstrumentPanel](#InstrumentPanel).
 
-[]{#SelectChordPanel}
 
 ## SelectChordPanel
 
@@ -99,7 +92,6 @@ In this panel, you can choose the current chord. It can be chosen from a
 list of all chords, or a list of chords that match the notes played in
 the [InstrumentPanel](#InstrumentPanel).
 
-[]{#AllChordsList}
 
 ### AllChordsList
 
@@ -107,7 +99,6 @@ the [InstrumentPanel](#InstrumentPanel).
 
 This panel lists all possible root notes (c..b) and most common chords.
 
-[]{#FoundChordsList}
 
 ### FoundChordsList
 
@@ -118,7 +109,6 @@ This tab lists the chords that match notes currently played in the
 what the checkboxes below this list mean is explained in the next
 section on the page on [finding chords](findingchords.html).
 
-[]{#Filtering Chords}
 
 ### Filtering Chords
 
