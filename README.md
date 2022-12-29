@@ -10,7 +10,9 @@ There's a [manual for the application](#manual) and also a section about [findin
 
 ## Installation
 
-Requires Java SE 11.
+To run the application, you'll need to install Java (version 11), download the [jar file](https://github.com/stulp/chordfinder/releases/download/v1.0.0/ChordFinderApplication.jar), and run it (on Linux with `java -jar ChordFinderApplication.jar`, on Windows/Mac by clicking on things).
+
+To compile the code yourself, clone the repo and do:
 
 ```
 cd src
