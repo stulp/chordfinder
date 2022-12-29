@@ -20,7 +20,7 @@ chords](findingchords.md).
 The ChordFinder applet should be displayed more or less as below. Its
 three main components are:
 
-- The [Instrument Panel](#Instrument Panel), which shows an instrument
+- The [Instrument Panel](#Instrument-Panel), which shows an instrument
     on which notes are displayed.
 - [CurrentChordPanel](#CurrentChordPanel). This panel displays the
     current chord. The name of this chord is in its border, and a
