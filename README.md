@@ -204,13 +204,13 @@ note. For instance, the semitone distances of the minor chord are
 `(1-1, b3-1, 5-1) = (0 3 7)`. The list of known chords is actually stored as follows:
 
 ```
-    Name : Intervals       Name : Intervals       Name : Intervals          Name : Intervals  
+  Name : Intervals       Name : Intervals       Name : Intervals          Name : Intervals  
      1 : 0                  7 : 0 4 7 10           9 : 0 4 7 10 14          11 : 0 4 7 10 14 17               
      5 : 0 7               m7 : 0 3 7 10          m9 : 0 3 7 10 14         m11 : 0 3 7 10 14 17                
  major : 0 4 7           maj7 : 0 4 7 11        maj9 : 0 4 7 11 14       maj11 : 0 4 7 11 14 17                
-     m : 0 3 7              6 : 0 4 7 9        9sus4 : 0 5 7 10 14         11+ : 0 4 7 10 14 18                
-   dim : 0 3 6             m6 : 0 3 7 9          6*9 : 0 4 7 9 14         m11+ : 0 3 7 10 14 18                
-    +5 : 0 4 8          7sus2 : 0 2 7 10        m6*9 : 0 3 7 9 14           13 : 0 4 7 10 14 17 21             
+     m : 0 3 7              6 : 0 4 7  9       9sus4 : 0 5 7 10 14         11+ : 0 4 7 10 14 18                
+   dim : 0 3 6             m6 : 0 3 7  9         6*9 : 0 4 7  9 14        m11+ : 0 3 7 10 14 18                
+    +5 : 0 4 8          7sus2 : 0 2 7 10        m6*9 : 0 3 7  9 14          13 : 0 4 7 10 14 17 21             
    m+5 : 0 3 8          7sus4 : 0 5 7 10         7-9 : 0 4 7 10 13         m13 : 0 3 7 10 14 17 21             
   sus2 : 0 2 7            7-5 : 0 4 6 10        m7-9 : 0 3 7 10 13                                             
   sus4 : 0 5 7           m7-5 : 0 3 6 10        7-10 : 0 4 7 10 15                                             
@@ -267,18 +267,18 @@ chord. For the notes `(a d e)`.
 ```
 Root note : Intervals =  Known chord (intervals)         CAI  RNP  ANP  R=B
             a  d  e                                   
-      c  :  9  2  4  =  C6*9     (0 4 7 9! 14=2!)        Y
-      c# :  8  1  3  =  C#m7+5-9 (0 3! 8! 10 13=1!)      Y
-      d  :  7  0  2  =  Dsus2    (0! 2! 7!)              Y    Y    Y
-      d# :  6 11  1  =  X                                
-      e  :  5 10  0  =  E7sus4   (0! 5! 7 10!)           Y    Y
-      f  :  4  9 11  =  X
-      f# :  3  8 10  =  F#m7+5   (0 3! 8! 10!)           Y
-      g  :  2  7  9  =  G6*9     (0 4 7! 9! 14=2!)       Y
-      g# :  1  6  8  =  X 
-      a  :  0  5  7  =  Asus4    (0! 5! 7!)              Y    Y    Y    Y
-      a# : 11  4  6  =  X
-      b  : 10  3  5  =  Bm11     (0 3! 7 10! 14=2 17=5!) Y
+       c  :  9  2  4  =  C6*9     (0 4 7 9! 14=2!)        Y
+       c# :  8  1  3  =  C#m7+5-9 (0 3! 8! 10 13=1!)      Y
+       d  :  7  0  2  =  Dsus2    (0! 2! 7!)              Y    Y    Y
+       d# :  6 11  1  =  X                                
+       e  :  5 10  0  =  E7sus4   (0! 5! 7 10!)           Y    Y
+       f  :  4  9 11  =  X
+       f# :  3  8 10  =  F#m7+5   (0 3! 8! 10!)           Y
+       g  :  2  7  9  =  G6*9     (0 4 7! 9! 14=2!)       Y
+       g# :  1  6  8  =  X 
+       a  :  0  5  7  =  Asus4    (0! 5! 7!)              Y    Y    Y    Y
+       a# : 11  4  6  =  X
+       b  : 10  3  5  =  Bm11     (0 3! 7 10! 14=2 17=5!) Y
 ```
 
 An `X` means that now known chord contains all given intervals. So,
