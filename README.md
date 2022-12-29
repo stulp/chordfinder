@@ -4,7 +4,9 @@ The ChordFinder Java application helps you to find the names of chords that you 
 
 ![ChordFinder application](images/chordfinderapplication.png)
 
-When I used to be in indie rock bands (*sheds tear...*) part of the songwriting process would be to try modifications of existing chords, e.g. play a B major on the 7th fret, and play the high b and e strings open. It sounds nice and gritty, but as an autodidact, I wouldn't know what those chords are called. This app helped me with that, i.e. figuring out that the above chord is a B11. Then I would write the chords down on a piece of paper, e.g. Cmaj7, B11, D6*9, and explain to my bandmates, it's just C, B, D on the higher frets, but always play the b and e strings open. In programming, this would be frowned upon as "a workaround" ;-)
+When I used to be in indie rock bands (e.g. "Vital Items", ["Raisin"](http://freekstulp.net/bands/raisin.jpg), "Mantazzo", ["The Unknown Host"](http://freekstulp.net/bands/theunknownhost.jpg), [""Minor Problems""](http://freekstulp.net/bands/minor_problems.jpg), *sheds tear...*) part of the songwriting process would be to try modifications of existing chords, e.g. play a B major on the 7th fret, and play the high b and e strings open. It sounds nice and gritty, but as an autodidact, I wouldn't know what those chords are called. This app helped me with that, i.e. figuring out that the above chord is a B11. Then I would write the chords down on a piece of paper, e.g. Cmaj7, B11, D6*9, and explain to my bandmates, it's just C, B, D on the higher frets, but always play the b and e strings open. In programming, this would be frowned upon as "a workaround" ;-) 
+
+There's a [manual for the application](#manual) and also a section about [finding chords](#finding-chords), i.e. the approach (algorithm) used to determine the chords from the notes.
 
 ## Installation
 
@@ -26,7 +28,9 @@ make run
 
 ## History
 
-This code was written around the year 2000 with J2SE 1.4. The initial commit reflects that state. I don't remember if I was any good at coding then; I dare not look! The subsequent commits are dedicated to porting to SE 11 (16 years forward in half an hour!), fixing linter warnings, and converting the html documentation to markdown.
+This code was written around the year 2000 with J2SE 1.2. I don't remember if I was any good at coding then; I dare not look now! Some years later I ported it to J2SE 1.4; the initial commit reflects that state. The subsequent commits are dedicated to porting to SE 11 (16 years forward in half an hour!), fixing linter warnings, and converting the html documentation to markdown. 
+
+Probably there are better tools or apps for doing this these days. But this was useful for me at the time, so I thought I'd make it open source, even if it is very old.
 
 # Manual
 
