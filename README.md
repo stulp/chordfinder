@@ -24,8 +24,7 @@ three main components are:
     choose the current chord. It also lists the chords currently played
     in the instrument.
 
-[![ChordFinder applet overview. Click to
-enlarge.](chordfinderapplet-annotated.png)](chordfinderapplet-annotated.png)
+![ChordFinder applet overview.](images/chordfinderapplet-annotated.png)
 
 ## InstrumentPanel
 
@@ -48,8 +47,7 @@ panel. Not strumming a string can be achieved by clicking in the tabs
 notation to the right of the neck, where right handed guitar players
 would normally strum. Pressing clear removes any notes played.
 
-[![GuitarPanel. Click to
-enlarge.](guitarpanel.png)](guitarpanel.png)
+![GuitarPanel](images/guitarpanel.png)
 
 
 ### PianoPanel
@@ -57,8 +55,7 @@ enlarge.](guitarpanel.png)](guitarpanel.png)
 Essentially as the guitar panel, but then, well, a piano. The number of
 octaves displayed can be varied.
 
-[![PianoPanel. Click to
-enlarge.](pianopanel.png)](pianopanel.png)
+![PianoPanel](images/pianopanel.png)
 
 
 ## CurrentChordPanel
@@ -78,7 +75,7 @@ In the example below, the chord Esus4 is displayed. The
 panel, but the "b" is not. The bass note is "a". This corresponds to
 the note being played in the InstrumentPanels abov.e
 
-![chordpanel](chordpanel.png)
+![chordpanel](images/chordpanel.png)
 
 The "Show chord in instrument" determines whether or not the current
 chord is displayed in the [InstrumentPanel](#InstrumentPanel).
@@ -93,14 +90,14 @@ the [InstrumentPanel](#InstrumentPanel).
 
 ### AllChordsList
 
-![allchords](allchords.png)
+![allchords](images/allchords.png)
 
 This panel lists all possible root notes (c..b) and most common chords.
 
 
 ### FoundChordsList
 
-![foundrootisplayed](foundrootisplayed.png)
+![foundrootisplayed](images/foundrootisplayed.png)
 
 This tab lists the chords that match notes currently played in the
 [InstrumentPanel](#InstrumentPanel). How these chords are found, and
@@ -119,16 +116,16 @@ list.
 
 1. All chords whose notes are a superset of the notes played are listed.
 
-![foundall](foundall.png)
+![foundall](images/foundall.png)
 
 2. As 1), but the root note of the chord must be played.
 
-![foundrootisplayed](foundrootisplayed.png)
+![foundrootisplayed](images/foundrootisplayed.png)
 
 3. As 2), but all notes of the chord must be played.
 
-![foundallareplayed](foundallareplayed.png)
+![foundallareplayed](images/foundallareplayed.png)
 
 4. As 2), and the root note must be the bass note.
 
-![foundrootisbass](foundrootisbass.png)
+![foundrootisbass](images/foundrootisbass.png)
