@@ -10,11 +10,15 @@ all: ${BIN_DIR} ${TARGETS}
 docs: ${SOURCE}
 	doxygen doxygen.config
 	
-run:
+run:${TARGETS}
 	java ChordFinderApplication
+
+jar: ${TARGETS}
+	jar cfe ChordFinderApplication.jar ChordFinderApplication  *.class
 
 clean:
 	rm -f ${BIN_DIR}/*.class
+	rm -f ${BIN_DIR}/*.jar
 	rm -rf ../doxygen-docs
 
 ${BIN_DIR}/%.class: %.java
