@@ -3,7 +3,7 @@
  * A Chord is simply a AbstractChord, with a specific root note. For instance,
  * "major" is an abstract chord (symbol), whereas "Cmajor" is a chord.
  */
-public class Chord extends AbstractChord implements Comparable {
+public class Chord extends AbstractChord {
   
   /**
    * The root note of this chord.
@@ -43,18 +43,7 @@ public class Chord extends AbstractChord implements Comparable {
       notes[i] = (intervals[i]+rootNote)%12;
     return notes;
   }
-  
-  /**
-   * Compares two chords
-   * Simply calls AbstractChord::compareTo()
-   * @param otherObject The other chord
-   * @return the value of AbstractChord::compareTo()
-   * @see AbstractChord::compareTo()
-   */
-  public int compareTo(Object otherObject) {
-    return super.compareTo(otherObject);
-  }
-  
+    
   /**
    * Return this chord's root note.
    * @return This chord's root note.

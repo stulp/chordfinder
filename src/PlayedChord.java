@@ -5,7 +5,7 @@
  * intervals [0, 4, 7, 10, 14, 17, 21], of which the intervals 10 (g) and 14 (b) 
  * aren't played.
  */
-public class PlayedChord extends Chord implements Comparable {
+public class PlayedChord extends Chord implements Comparable<PlayedChord> {
   
   /**
    * The intervals that are actually played.
@@ -76,17 +76,16 @@ public class PlayedChord extends Chord implements Comparable {
     return false;
   }
 
-  public int compareTo(Object otherObject) {
-    PlayedChord otherChord = (PlayedChord)otherObject;
+  public int compareTo(PlayedChord otherChord) {
     if (otherChord.isRootNotePlayed()==this.isRootNotePlayed()) {
       if (otherChord.getIntervals().length == this.intervals.length) {
         if (this.bassNoteIsRootNote()==otherChord.bassNoteIsRootNote()) {
-          return super.compareTo(otherObject);
+          return compareToAbstract(otherChord);
         } 
         if (this.bassNoteIsRootNote()) return -1; // The other isn't played!
         return 1; // The other is played!
       }
-      return super.compareTo(otherObject);
+      return compareToAbstract(otherChord);
     }
     if (this.isRootNotePlayed()) return -1; // The other isn't played!
     return 1; // The other is played!

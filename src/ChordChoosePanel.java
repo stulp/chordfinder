@@ -4,34 +4,35 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Vector;
 
+@SuppressWarnings("serial")
 public class ChordChoosePanel extends JTabbedPane implements NotesChangedListener, ItemListener, ListSelectionListener  {
 
   //String noChordsFoundString = new String("No chords found.");
 
   PlayedChord[] foundPlayedChords = new PlayedChord[0];
 
-  JList foundChordsList;
+  JList<PlayedChord> foundChordsList;
   JCheckBox rootNoteMustBePlayedJCheckBox;
   JCheckBox rootNoteMustBeBassNoteJCheckBox;
   JCheckBox allNotesMustBePlayedJCheckBox;
   
 
-	JList rootNoteList;
-	JList chordSymbolList;
+	JList<String> rootNoteList;
+	JList<AbstractChord> chordSymbolList;
   
 	public ChordChoosePanel() {
     
     // Initialize components
 		//foundChordsList = new JList(new String[] {noChordsFoundString});
-		foundChordsList = new JList();
+		foundChordsList = new JList<>();
     foundChordsList.setVisibleRowCount(5);
     foundChordsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
-    rootNoteList = new JList(Note.noteStrings);
+    rootNoteList = new JList<>(Note.noteStrings);
     rootNoteList.setVisibleRowCount(9);
     rootNoteList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION); 
 
-    chordSymbolList = new JList(AbstractChord.abstractChords);
+    chordSymbolList = new JList<>(AbstractChord.abstractChords);
     //chordSymbolList = new JList(AbstractChord.getChordSymbols());
     chordSymbolList.setVisibleRowCount(9);
     chordSymbolList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION); 
@@ -83,7 +84,7 @@ public class ChordChoosePanel extends JTabbedPane implements NotesChangedListene
    *
    */
   public void updateFoundChordsList() {
-    Vector playedChords = new Vector();
+    Vector<PlayedChord> playedChords = new Vector<>();
     for (int i=0; i<foundPlayedChords.length; i++) {
       PlayedChord playedChord = foundPlayedChords[i];
 
@@ -139,10 +140,10 @@ public class ChordChoosePanel extends JTabbedPane implements NotesChangedListene
         rootNoteList.setSelectedIndex(rootNote);
       }
 
-      AbstractChord abstractChord = (AbstractChord)chordSymbolList.getSelectedValue();
+      AbstractChord abstractChord = chordSymbolList.getSelectedValue();
       if (abstractChord==null) {
         chordSymbolList.setSelectedIndex(0);
-        abstractChord = (AbstractChord)chordSymbolList.getSelectedValue();
+        abstractChord = chordSymbolList.getSelectedValue();
       }
       PlayedChord playedChord = new PlayedChord(new Chord(rootNote,abstractChord));
       notifyListeners(playedChord);
@@ -167,7 +168,7 @@ public class ChordChoosePanel extends JTabbedPane implements NotesChangedListene
   
   
   
-  Vector chordChangedListeners = new Vector();
+  Vector<ChordChangedListener> chordChangedListeners = new Vector<>();
 
   public void addChordChangedListener(ChordChangedListener ncl) {
      chordChangedListeners.add(ncl);
@@ -179,7 +180,7 @@ public class ChordChoosePanel extends JTabbedPane implements NotesChangedListene
 
   public void notifyListeners(PlayedChord playedChord) {
     for (int i=0; i<chordChangedListeners.size(); i++) {
-      ((ChordChangedListener)chordChangedListeners.get(i)).chordChanged(playedChord);
+      chordChangedListeners.get(i).chordChanged(playedChord);
     }
   }
   

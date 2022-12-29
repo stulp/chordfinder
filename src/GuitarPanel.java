@@ -3,6 +3,7 @@ import java.awt.*;
 import java.util.*;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class GuitarPanel extends InstrumentPanel implements ItemListener, ActionListener {
   
   GuitarCanvas canvas;
@@ -13,8 +14,8 @@ public class GuitarPanel extends InstrumentPanel implements ItemListener, Action
   static int NOTE_GHOST = 1;
   static int NOTE_TUNING = 2;
   
-  JComboBox numberOfFretsJComboBox;
-  JComboBox tuningsJComboBox;
+  JComboBox<Integer> numberOfFretsJComboBox;
+  JComboBox<GuitarTuning> tuningsJComboBox;
   JButton clearButton;
   
   int fretBoardMarkerRadius;
@@ -28,12 +29,12 @@ public class GuitarPanel extends InstrumentPanel implements ItemListener, Action
     
     clearButton = new JButton("Clear");
 
-    numberOfFretsJComboBox = new JComboBox();
+    numberOfFretsJComboBox = new JComboBox<>();
     for (int i=0; i<numberOfFrets.length; i++)
-      numberOfFretsJComboBox.addItem(new Integer(numberOfFrets[i]));
+      numberOfFretsJComboBox.addItem(Integer.valueOf(numberOfFrets[i]));
     numberOfFretsJComboBox.setSelectedIndex(5);
     
-    tuningsJComboBox = new JComboBox();
+    tuningsJComboBox = new JComboBox<>();
     for (int i=0; i<GuitarTuning.guitarTunings.length; i++)
       tuningsJComboBox.addItem(GuitarTuning.guitarTunings[i]);
 
@@ -106,7 +107,7 @@ public class GuitarPanel extends InstrumentPanel implements ItemListener, Action
     }
   }
     
-  Vector notesChangedListeners = new Vector();
+  Vector<NotesChangedListener> notesChangedListeners = new Vector<>();
   
   public void addNotesChangedListener(NotesChangedListener ncl) {
      notesChangedListeners.add(ncl);
@@ -118,7 +119,7 @@ public class GuitarPanel extends InstrumentPanel implements ItemListener, Action
 
   public void notifyListeners(int[] notes) {
     for (int i=0; i<notesChangedListeners.size(); i++) {
-      ((NotesChangedListener)notesChangedListeners.get(i)).notesChanged(notes);
+      notesChangedListeners.get(i).notesChanged(notes);
     }
   }
 

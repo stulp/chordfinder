@@ -3,13 +3,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Vector;
 
+@SuppressWarnings("serial")
 public class PianoPanel extends InstrumentPanel implements ItemListener, ActionListener {
   
   PianoCanvas canvas;
 
   int numberOfOctaves[] = {1,2,3,4,5,6};
 
-  JComboBox numberOfOctavesJComboBox;
+  JComboBox<Integer> numberOfOctavesJComboBox;
 
   JButton clearButton;
   
@@ -23,12 +24,12 @@ public class PianoPanel extends InstrumentPanel implements ItemListener, ActionL
 
     canvas = new PianoCanvas();
 
-    numberOfOctavesJComboBox = new JComboBox();
+    numberOfOctavesJComboBox = new JComboBox<>();
     for (int i=0; i<numberOfOctaves.length; i++) {
-      numberOfOctavesJComboBox.addItem(new Integer(numberOfOctaves[i])); 
+      numberOfOctavesJComboBox.addItem(Integer.valueOf(numberOfOctaves[i])); 
     }
     numberOfOctavesJComboBox.addItemListener(this);
-    numberOfOctavesJComboBox.setSelectedItem(new Integer(4));
+    numberOfOctavesJComboBox.setSelectedItem(Integer.valueOf(4));
 
     JPanel componentsPanel = new JPanel(new FlowLayout());
     componentsPanel.add(clearButton);
@@ -85,7 +86,7 @@ public class PianoPanel extends InstrumentPanel implements ItemListener, ActionL
   }
   
 
-  Vector notesChangedListeners = new Vector();
+  Vector<NotesChangedListener> notesChangedListeners = new Vector<>();
 
   public void addNotesChangedListener(NotesChangedListener ncl) {
      notesChangedListeners.add(ncl);
@@ -97,10 +98,11 @@ public class PianoPanel extends InstrumentPanel implements ItemListener, ActionL
 
   public void notifyListeners(int[] notes) {
     for (int i=0; i<notesChangedListeners.size(); i++) {
-      ((NotesChangedListener)notesChangedListeners.get(i)).notesChanged(notes);
+      notesChangedListeners.get(i).notesChanged(notes);
     }
   }
 
+  @SuppressWarnings("serial")
   protected class PianoCanvas extends JPanel implements MouseListener {
     
     Rectangle[] keys; 

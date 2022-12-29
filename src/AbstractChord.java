@@ -4,7 +4,7 @@ import java.util.Comparator;
 /**
  * Defines the intervals that constitute a chord, without a specific root note.
  */
-public class AbstractChord implements Comparable {
+public class AbstractChord {
   
   /**
    * The abstract chord's symbol, e.g. "maj7" or "m7+5-9". 
@@ -169,9 +169,8 @@ public class AbstractChord implements Comparable {
    * is smaller than that of otherObject, 1 if the reverse hold, and 0 if their 
    * indices are equal. 
    */
-  public int compareTo(Object otherObject) {
+  protected int compareToAbstract(AbstractChord otherAbstractChord) {
     // Sorting is done according to the index in 'abstractChords'
-    AbstractChord otherAbstractChord = (AbstractChord)otherObject;
     int thisIndex = this.getIndex();
     int otherIndex = otherAbstractChord.getIndex();
     if (thisIndex<otherIndex) return -1;

@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.util.Vector;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class ChordFinderApplication extends JFrame implements ItemListener {
   
 	ChordChoosePanel chordChoosePanel = new ChordChoosePanel();

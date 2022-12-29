@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Vector;
 
+@SuppressWarnings("serial")
 public abstract class InstrumentPanel extends JPanel implements NotesChangedListener {
   
   public abstract String getName();

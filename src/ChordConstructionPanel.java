@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
 
-
+@SuppressWarnings("serial")
 public class ChordConstructionPanel extends JPanel implements ChordChangedListener {
   
   private PlayedChord playedChord;
@@ -42,7 +42,7 @@ public class ChordConstructionPanel extends JPanel implements ChordChangedListen
     if (chord!=null) notifyListeners(chord.getNotes());
   }
 
-  Vector notesChangedListeners = new Vector();
+  Vector<NotesChangedListener> notesChangedListeners = new Vector<>();
 
   public void addNotesChangedListener(NotesChangedListener ncl) {
      notesChangedListeners.add(ncl);
@@ -54,10 +54,11 @@ public class ChordConstructionPanel extends JPanel implements ChordChangedListen
 
   public void notifyListeners(int[] notes) {
     for (int i=0; i<notesChangedListeners.size(); i++) {
-      ((NotesChangedListener)notesChangedListeners.get(i)).notesChanged(notes);
+      notesChangedListeners.get(i).notesChanged(notes);
     }
   }
 
+  @SuppressWarnings("serial")
   public class ChordConstructionCanvas extends JPanel {
   
     private Point circlesUpperLeft[][];

@@ -12,7 +12,7 @@ public class ChordFinder {
     // One note does not constitute a chord...
     if (notes.length<1) return new PlayedChord[0];
         
-    Vector possibleChordsVector = new Vector();
+    Vector<PlayedChord> possibleChordsVector = new Vector<>();
 
     // Try all notes as root note
 		for (int rootNote=Note.C; rootNote<=Note.B; rootNote++) {
@@ -37,7 +37,7 @@ public class ChordFinder {
     // 1.5
     PlayedChord[] possibleChords = new PlayedChord[possibleChordsVector.size()];
     for (int i=0; i<possibleChords.length; i++)
-      possibleChords[i] = (PlayedChord)possibleChordsVector.get(i);
+      possibleChords[i] = possibleChordsVector.get(i);
     Arrays.sort(possibleChords);
 
 		return possibleChords;
