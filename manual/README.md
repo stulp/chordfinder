@@ -7,7 +7,7 @@ The ChordFinder applet is intended to help find the names of chords
 played on a guitar, bass or piano, as well as alternate positions for
 this chord. "Playing" chords is done by clicking them in a
 visualization of the instrument. There is a seperate section on [finding
-chords](findingchords.html).
+chords](findingchords.md).
 
 
 ## Interface Manual
@@ -25,15 +25,7 @@ three main components are:
     in the instrument.
 
 [![ChordFinder applet overview. Click to
-enlarge.](chordfinderapplet-annotated.png){height="250"}](chordfinderapplet-annotated.png)
-
-It is important to understand the difference between green and blue
-notes (pun not intended). Green notes are manually specified through
-clicking in the [InstrumentPanel](#InstrumentPanel), for instance on the
-guitar's fretboard, or the piano's keyboard. These notes are
-"played". Blue notes are not actually played, but are part of the
-current chord displayed in the [CurrentChordPanel](#CurrentChordPanel).
-
+enlarge.](chordfinderapplet-annotated.png)](chordfinderapplet-annotated.png)
 
 ## InstrumentPanel
 
@@ -41,6 +33,12 @@ This panel allows you to "play" notes on an instrument (in green), and
 visualize notes from the chord in the ChordPanel (in blue). It either
 displays the fretboard of a guitar, or the keyboard of a piano.
 
+It is important to understand the difference between green and blue
+notes (pun not intended). Green notes are manually specified through
+clicking in the [InstrumentPanel](#InstrumentPanel), for instance on the
+guitar's fretboard, or the piano's keyboard. These notes are
+"played". Blue notes are not actually played, but are part of the
+current chord displayed in the [CurrentChordPanel](#CurrentChordPanel).
 
 ### GuitarPanel
 
@@ -51,7 +49,7 @@ notation to the right of the neck, where right handed guitar players
 would normally strum. Pressing clear removes any notes played.
 
 [![GuitarPanel. Click to
-enlarge.](guitarpanel.png){width="500"}](guitarpanel.png)
+enlarge.](guitarpanel.png)](guitarpanel.png)
 
 
 ### PianoPanel
@@ -60,7 +58,7 @@ Essentially as the guitar panel, but then, well, a piano. The number of
 octaves displayed can be varied.
 
 [![PianoPanel. Click to
-enlarge.](pianopanel.png){width="500"}](pianopanel.png)
+enlarge.](pianopanel.png)](pianopanel.png)
 
 
 ## CurrentChordPanel
@@ -107,23 +105,30 @@ This panel lists all possible root notes (c..b) and most common chords.
 This tab lists the chords that match notes currently played in the
 [InstrumentPanel](#InstrumentPanel). How these chords are found, and
 what the checkboxes below this list mean is explained in the next
-section on the page on [finding chords](findingchords.html).
+section on the page on [finding chords](findingchords.md).
 
 
 ### Filtering Chords
 
 This section will probably not make much sense if you have not yet read
-the page on [finding chords](findingchords.html), especially the section
-on [filtering chords](findingchords.html#filteringchords).
+the page on [finding chords](findingchords.md), especially the section
+on [filtering chords](findingchords.md#filteringchords).
 
 Which chords are listed can be controlled with the check boxes below the
 list.
 
-![foundall](foundall.png)\
 1. All chords whose notes are a superset of the notes played are listed.
-![foundrootisplayed](foundrootisplayed.png)\
+
+![foundall](foundall.png)
+
 2. As 1), but the root note of the chord must be played.
-![foundallareplayed](foundallareplayed.png)\
+
+![foundrootisplayed](foundrootisplayed.png)
+
 3. As 2), but all notes of the chord must be played.
-![foundrootisbass](foundrootisbass.png)\
+
+![foundallareplayed](foundallareplayed.png)
+
 4. As 2), and the root note must be the bass note.
+
+![foundrootisbass](foundrootisbass.png)
